@@ -1,11 +1,13 @@
 import React from "react";
+// -------------------------------------------------importing required package from react bootstrap and rechart----------------------------------
+
 import "./App.css";
 import { PieChart, Pie, LineChart, Line, ResponsiveContainer } from "recharts";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
-
 import Card from "react-bootstrap/Card";
 import ProgressBar from "react-bootstrap/ProgressBar";
+// -------------------------------------------------PIE  chart data----------------------------------------------------------
 
 function App() {
   const data02 = [
@@ -21,6 +23,8 @@ function App() {
     { name: "D1", value: 150 },
     { name: "D2", value: 50 },
   ];
+// -------------------------------------------------linear chart data----------------------------------------------------------
+
   const data = [
     {
       name: "Page A",
@@ -67,6 +71,8 @@ function App() {
   ];
   return (
     <div className="App">
+{/* // -------------------------------------------------sidebar and buttons---------------------------------- */}
+
       <div className="sidenavbar">
       <ButtonGroup vertical style={{ width: "100%" }}>
         <Button variant="primary" style={{ height: "60px" }}>
@@ -105,6 +111,8 @@ function App() {
         <hr />
       </div>
       <div className="maindiv">
+{/* // -------------------------------------------------Dashboard--------------------------------- */}
+
         <h4>Dashboard</h4>
 
         <div className="dashboard">
@@ -152,6 +160,8 @@ function App() {
               </LineChart>
             </ResponsiveContainer>
           </Card>
+{/* // ------------------------------------------------Graph--------------------------------- */}
+
           <Card className="piechart">
             <Card.Header><h6>Revenue Sources</h6></Card.Header>
             <ResponsiveContainer width="100%" height="100%">
@@ -171,6 +181,8 @@ function App() {
           </Card>
           </div>
           <br/>
+{/* // ------------------------------------------------Progress bar--------------------------------- */}
+
           <div  className="container2">
           <Card className="div3">
             <Card.Header><h6>Projects</h6></Card.Header>
@@ -193,6 +205,8 @@ function App() {
             <ProgressBar variant="secondary" now={80} />
             </Card.Body>
           </Card>
+{/* // ------------------------------------------------ Color palette--------------------------------- */}
+
         <Card className="colorpalettecontainer">
           <Card bg="primary" className="colorpalette"></Card>
           <Card bg="secondary" className="colorpalette"></Card>
